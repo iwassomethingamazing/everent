@@ -1,0 +1,71 @@
+Accedi:
+Username o email o sms
+Password o senno dimenticato password
+Accesso Biometrico(magari,face id)
+
+Registrati:
+username
+Email o sms
+Password
+Rinserire Password
+Inserire documento o passaporto(legge sul perche chiediamo documento)
+controllo documenti con foto alla faccia
+Termini e condizioni da accettare
+Politica di Privacy da accettare
+captcha
+
+
+Account:
+Attività Sospette
+Cambiare email o sms
+Autenticazione a Due Fattori
+LogOut
+Notifiche Push
+Tema Scuro/Chiaro
+Assistenza
+Storico Attività
+Personalizzazione del Profilo
+Profilo Verificato(badge dopo 25 vendite)
+Cancellazione Sicura dei Dati
+
+Persone:
+Recensione cliente e noleggiatore(stelle con accanto numero) 
+e recensioni scritte accanto alle stelle
+Funzione di Messaggistica
+Sistema di Segnalazione
+
+
+prodotti:
+valute di soldi in ogni paese
+pagamenti paypal,ethereum,litecoin,bitcoin, carta di credito
+o senno deposito in everentcoin
+localizzazione che ti fa vedere quelli che si trovano in un raggio di 50km
+Mappa Interattiva(mostra una mappa con prodotti)
+Foto Multiple o video (obbligatorio)
+Calendario di Disponibilità
+Verifica degli Utenti
+Condivisione Social
+
+sicurezza e supporto:
+Tracciamento delle Transazioni
+Supporto in Tempo Reale
+Guida per gli Utenti
+Crittografia End-to-End
+Archiviazione Sicura
+Blocco dell'Account(dopo tanti tentativi)
+Notifiche di Accesso Sospetto
+
+Integrazione con altre app: 
+Integrazione con App di Navigazione,ovvero se qualcuno clicca su indirizzo puo usare navigazione
+
+
+feedback:
+Sondaggi e Feedback
+Funzione di "Segnala un Problema"
+
+interazione:
+Funzionalità di Follow (Consentire agli utenti di seguire altri utenti per ricevere aggiornamenti sui loro prodotti)
+
+sicurezza comunicazione:
+Protezione DDoS
+Protocollo HTTPS
