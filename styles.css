@@ -90,7 +90,7 @@ header {
     background: white;
     border-radius: 15px;
     padding: 10px; /* Reduced padding */
-    width: 180px; /* Shortened width */
+    width: 140px; /* Shortened width */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
