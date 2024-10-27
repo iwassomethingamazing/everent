@@ -89,7 +89,7 @@ header {
 .product {
     background: white;
     border-radius: 15px;
-    padding: 20px; /* Increased padding for spacious look */
+    padding: 20px;
     width: 240px; /* Uniform width */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -135,18 +135,17 @@ header {
 
 footer {
     background-color: #000; /* Black footer */
-    padding: 10px 0;
+    padding: 20px 0; /* Increased padding for better spacing */
 }
 
 .black-bar {
     display: flex;
     justify-content: center;
+    gap: 40px; /* Increased space between icons */
 }
 
 .footer-icon {
-    width: 30px; /* Icon size */
-    margin: 0 15px;
-    cursor: pointer;
+    width: 40px; /* Icon size */
     transition: opacity 0.3s;
 }
 
