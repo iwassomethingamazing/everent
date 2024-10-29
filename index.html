@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Everent</title>
+    <title>Everent - Rent Cool Products</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -11,10 +11,11 @@
     <header>
         <div class="logo">
             <img src="images/logo-icon.png" alt="Logo Icon" class="logo-icon">
+            <h1>Everent</h1>
         </div>
         <div class="search">
             <input type="text" placeholder="Search products..." id="searchBar" oninput="filterProducts()">
-            <button onclick="filterProducts()">🔍</button>
+            <button onclick="filterProducts()">Search</button>
         </div>
     </header>
 
@@ -28,7 +29,7 @@
             <div class="product-info">
                 <h3>Electric Bike</h3>
                 <p class="price">30 CHF/day</p>
-                <button class="buy-button">Rent Now</button>
+                <button class="buy-button" onclick="showDetails('Electric Bike', '30 CHF/day', 'Perfect for city commutes!')">Rent Now</button>
             </div>
         </div>
         <div class="product" data-name="Floor Scrubber">
@@ -36,7 +37,7 @@
             <div class="product-info">
                 <h3>Floor Scrubber</h3>
                 <p class="price">50 CHF/day</p>
-                <button class="buy-button">Rent Now</button>
+                <button class="buy-button" onclick="showDetails('Floor Scrubber', '50 CHF/day', 'Keep your floors spotless!')">Rent Now</button>
             </div>
         </div>
         <div class="product" data-name="Mountain Bike">
@@ -44,7 +45,7 @@
             <div class="product-info">
                 <h3>Mountain Bike</h3>
                 <p class="price">40 CHF/day</p>
-                <button class="buy-button">Rent Now</button>
+                <button class="buy-button" onclick="showDetails('Mountain Bike', '40 CHF/day', 'Conquer any trail!')">Rent Now</button>
             </div>
         </div>
         <div class="product" data-name="Electric Scooter">
@@ -52,10 +53,19 @@
             <div class="product-info">
                 <h3>Electric Scooter</h3>
                 <p class="price">25 CHF/day</p>
-                <button class="buy-button">Rent Now</button>
+                <button class="buy-button" onclick="showDetails('Electric Scooter', '25 CHF/day', 'Zip around town with ease!')">Rent Now</button>
             </div>
         </div>
     </section>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h3 id="popup-title"></h3>
+            <p id="popup-price"></p>
+            <p id="popup-description"></p>
+        </div>
+    </div>
 
     <footer>
         <div class="black-bar">
@@ -74,6 +84,23 @@
                 const productName = product.getAttribute('data-name').toLowerCase();
                 product.style.display = productName.includes(query) ? 'block' : 'none';
             });
+        }
+
+        function showDetails(title, price, description) {
+            document.getElementById('popup-title').innerText = title;
+            document.getElementById('popup-price').innerText = price;
+            document.getElementById('popup-description').innerText = description;
+            document.getElementById('popup').style.display = 'flex';
+            setTimeout(() => {
+                document.getElementById('popup').classList.add('visible');
+            }, 10);
+        }
+
+        function closePopup() {
+            document.getElementById('popup').classList.remove('visible');
+            setTimeout(() => {
+                document.getElementById('popup').style.display = 'none';
+            }, 300); // Matches the transition duration
         }
     </script>
 </body>
