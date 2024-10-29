@@ -135,19 +135,21 @@ header {
 footer {
     background-color: #000; /* Black footer */
     padding: 20px 0; /* Increased padding for better spacing */
+    position: relative; /* Ensure positioning of footer */
 }
 
 .black-bar {
     display: flex;
-    justify-content: center;
-    gap: 40px; /* Increased space between icons */
+    justify-content: space-around; /* Distribute icons evenly */
+    padding: 10px 0;
+    background-color: #111; /* Darker background for the footer */
 }
 
-.footer-icon {
+.footer-icon img {
     width: 40px; /* Icon size */
     transition: opacity 0.3s;
 }
 
-.footer-icon:hover {
-    opacity: 0.7;
+.footer-icon img:hover {
+    opacity: 0.7; /* Slightly transparent on hover */
 }
