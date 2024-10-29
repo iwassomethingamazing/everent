@@ -41,7 +41,6 @@ header {
     border: none;
     border-radius: 25px;
     width: 250px;
-    margin-right: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s;
 }
@@ -49,20 +48,6 @@ header {
 .search input:focus {
     outline: none;
     box-shadow: 0 0 5px #d35400; /* Darker orange */
-}
-
-.search button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 25px;
-    background-color: #d35400;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.search button:hover {
-    background-color: #c0392b;
 }
 
 .screenshot {
@@ -78,9 +63,8 @@ header {
 }
 
 .product-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allows products to wrap */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two products per row */
     gap: 30px; /* Increased space between products */
     padding: 20px;
 }
@@ -89,7 +73,6 @@ header {
     background: white;
     border-radius: 15px;
     padding: 20px;
-    width: 250px; /* Fixed width for consistency */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
