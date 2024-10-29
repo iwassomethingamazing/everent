@@ -15,8 +15,11 @@
             <h1>Everent</h1>
         </div>
         <div class="container">
-            <input type="text" placeholder="Search..." id="searchBar">
-            <div class="search" onclick="filterProducts()"></div>
+            <input type="text" placeholder="Search..." id="searchBar" oninput="handleInput()">
+            <div class="search" onclick="handleSearchClick()">
+                <img id="searchIcon" src="images/search-icon.png" alt="Search Icon">
+                <img id="clearIcon" src="images/clear-icon.png" alt="Clear Icon" style="display: none;">
+            </div>
         </div>
     </header>
 
@@ -74,6 +77,27 @@
     </footer>
 
     <script>
+        function handleInput() {
+            const input = document.getElementById('searchBar');
+            const searchIcon = document.getElementById('searchIcon');
+            const clearIcon = document.getElementById('clearIcon');
+            
+            if (input.value.trim() === '') {
+                searchIcon.style.display = 'block';
+                clearIcon.style.display = 'none';
+            } else {
+                searchIcon.style.display = 'none';
+                clearIcon.style.display = 'block';
+            }
+        }
+
+        function handleSearchClick() {
+            const input = document.getElementById('searchBar');
+            if (input.value.trim() !== '') {
+                filterProducts();
+            }
+        }
+
         function filterProducts() {
             const query = document.getElementById('searchBar').value.toLowerCase();
             const products = document.querySelectorAll('.product');
