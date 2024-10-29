@@ -93,6 +93,11 @@ header {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.product:hover {
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -133,22 +138,10 @@ header {
     background-color: #219653; /* Darker green */
 }
 
-footer {
-    background-color: #000; /* Black footer */
-    padding: 20px 0; /* Increased padding for better spacing */
-}
-
-.black-bar {
-    display: flex;
-    justify-content: center;
-    gap: 40px; /* Increased space between icons */
-}
-
-.footer-icon {
-    width: 40px; /* Icon size */
-    transition: opacity 0.3s;
-}
-
-.footer-icon:hover {
-    opacity: 0.7;
-}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    botto
