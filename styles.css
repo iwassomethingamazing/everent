@@ -5,12 +5,8 @@
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(45deg, black, #0f0f2b);
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
 .navbar {
@@ -23,86 +19,21 @@ body {
 
 .navbar h1 {
     font-family: 'Evevent', sans-serif;
-    font-size: 36px;
+    font-size: 36px; /* Increased font size */
     color: white;
 }
 
-form {
-    position: relative;
-    transition: all 1s;
-}
-
-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 42.5px;
-    line-height: 30px;
-    outline: 0;
-    border: 0;
-    font-size: 1em;
-    border-radius: 20px;
-    padding: 0 20px;
-    background: white;
-    transition: width 0.5s ease; /* Animation for width */
-}
-
-.fa {
-    box-sizing: border-box;
+.searchbar {
     padding: 10px;
-    width: 42.5px;
-    height: 42.5px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: 4px;
-    color: #07051a;
-    text-align: center;
-    font-size: 1.2em;
-    transition: all 0.5s ease; /* Animation for icon */
+    border: 1px solid orange;
+    border-radius: 0; /* No rounded corners */
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
 }
 
-form:focus-within,
-form:hover,
-form:valid {
-    cursor: pointer;
-}
-
-form:hover input,
-form:focus-within input,
-form:valid input {
-    width: 200px; /* Expanded width on focus */
-}
-
-form:hover .fa,
-form:focus-within .fa,
-form:valid .fa {
-    background: #07051a;
-    color: white;
-}
-
-button {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    font-size: 20px;
-    color: white;
-    padding: 4px;
-    min-height: max-content;
-    background: transparent;
-    outline: 0;
-    border: 1px solid #303030;
-    border-radius: 4px;
-    text-align: center;
-    width: 100%;
-    cursor: pointer;
-}
-
-form:valid button {
-    display: block; /* Show button when input is valid */
+.searchbar:focus {
+    border-color: darkorange; /* Highlight border on focus */
 }
 
 .products-container {
@@ -129,7 +60,7 @@ form:valid button {
 }
 
 .product-icon {
-    width: 80px;
+    width: 80px; /* Icon size */
     height: auto;
     margin-bottom: 10px;
 }
