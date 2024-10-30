@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Evevent'; /* Custom font for the title */
-    src: url('fonts/title.ttf') format('truetype'); /* Path to title font */
+    font-family: 'Evevent';
+    src: url('fonts/title.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Font1'; /* Custom font for prices */
-    src: url('fonts/font1.ttf') format('truetype'); /* Path to price font */
+    font-family: 'Font1';
+    src: url('fonts/font1.ttf') format('truetype');
 }
 
 * {
@@ -28,8 +28,8 @@ body {
 }
 
 .navbar h1 {
-    font-family: 'Font1', sans-serif; /* Custom font for the title */
-    font-size: 36px; /* Increased font size */
+    font-family: 'Font1', sans-serif;
+    font-size: 36px;
     color: white;
 }
 
@@ -42,95 +42,85 @@ body {
 
 .product-box {
     background-color: white;
-    border: 1px solid gray; /* Border style */
+    border: 1px solid gray;
     border-radius: 10px;
     padding: 20px;
-    margin: 20px; /* Margin for spacing */
-    width: 300px; /* Fixed width for product boxes */
+    margin: 20px;
+    width: 300px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;
 }
 
 .product-box:hover {
-    transform: scale(1.05); /* Scale effect on hover */
+    transform: scale(1.05);
 }
 
 .product-icon {
-    width: 80px; /* Icon size */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 5px; /* Space below icon */
+    width: 80px;
+    height: auto;
+    margin-bottom: 5px;
 }
 
 .product-box h2 {
-    font-family: 'Font1', sans-serif; /* Custom font for product titles */
+    font-family: 'Font1', sans-serif;
     font-weight: bold;
     color: orange;
-    margin: 10px 0; /* Space above and below */
+    margin: 10px 0;
 }
 
 .product-description {
-    font-size: 14px; /* Description font size */
-    color: #555; /* Description color */
-    margin-bottom: 10px; /* Space below description */
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
 }
 
-.price, .uses {
-    font-family: 'Font1', sans-serif; /* Custom font for prices and uses */
+.price,
+.uses {
+    font-family: 'Font1', sans-serif;
     font-weight: bold;
-    color: #333; /* Common color for price and uses */
-    margin-top: 10px; /* Space above */
+    color: #333;
+    margin-top: 10px;
 }
 
 .rent-button {
-    display: inline-block; /* Button-like appearance */
-    background-color: orange; /* Button background */
-    color: white; /* Text color */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 15px; /* Padding for button */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-family: 'Font1', sans-serif; /* Custom font for button */
-    margin-top: 10px; /* Space above the button */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s; /* Smooth transition */
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: 'Font1', sans-serif;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
 .rent-button:hover {
-    background-color: darkorange; /* Darker color on hover */
+    background-color: darkorange;
 }
 
 .footer {
-    position: fixed; /* Fixed positioning */
+    position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%; /* Full width */
-    margin-top: 0; /* Remove margin if fixed */
-}
-
-.icon-container {
-    display: flex;
-    justify-content: space-around; /* Distribute icons evenly */
-    padding: 20px; /* Padding around the container */
-}
-
-.footer-icon {
-    width: 40px; /* Icon size */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
 }
 
 .orange-bar {
-    background-color: orange; /* Background color for the orange bar */
-    color: white; /* Text color */
-    text-align: center; /* Center text */
-    padding: 30px; /* Padding around the bar */
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 30px;
 }
 
 .balance {
-    font-family: 'Font1', sans-serif; /* Custom font for balance */
+    font-family: 'Font1', sans-serif;
     font-weight: bold;
-    color: white; /* Text color */
-    margin-left: 20px; /* Spacing to the left */
-    font-size: 20px; /* Font size for balance */
+    color: white;
+    margin-left: 20px;
+    font-size: 20px;
 }
+
 
