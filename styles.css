@@ -43,10 +43,10 @@ body {
 
 .product-box {
     background-color: white;
-    border: 1px white gray;
+    border: 1px solid gray; /* Corrected to "solid" for proper border style */
     border-radius: 10px;
     padding: 20px;
-    margin: 5px;
+    margin: 20px; /* Increased margin for more distance */
     width: 300px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
