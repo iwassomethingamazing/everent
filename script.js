@@ -1,16 +1,16 @@
-function formatCurrency(value, currency) {
-    var parts = new Intl.NumberFormat(navigator.language, { style: 'currency', currency }).formatToParts(value);
+function formatCurrency(value) {
+    const userLocale = navigator.language; // Get the user's locale
+    const currency = new Intl.NumberFormat(userLocale, { style: 'currency' }).resolvedOptions().currency; // Determine the currency from locale
     
-    var formattedValue = parts.map(p => p.value).join('');
+    // Format the value with the user's currency
+    const formattedValue = new Intl.NumberFormat(userLocale, { style: 'currency', currency }).format(value);
     return formattedValue;
 }
 
-const currencies = ['USD', 'EUR', 'CHF', 'GBP', 'JPY'];
 const valueToDisplay = 10000; // Change this value as needed
-const selectedCurrency = 'USD'; // Change this to desired currency
 
 // Format the value and update the span
-const formattedMoney = formatCurrency(valueToDisplay, selectedCurrency);
+const formattedMoney = formatCurrency(valueToDisplay);
 document.getElementById('moneyValue').textContent = formattedMoney;
 
 // Optional: Log the formatted value to the console
