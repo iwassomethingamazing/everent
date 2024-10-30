@@ -84,7 +84,7 @@ body {
 }
 
 .rent-button {
-    background-color: green; /* Green background */
+    background-color: orange; /* Green background */
     color: white; /* White text color */
     border: none; /* No border */
     border-radius: 5px; /* Rounded corners */
@@ -96,7 +96,7 @@ body {
 }
 
 .rent-button:hover {
-    background-color: darkgreen; /* Darker green on hover */
+    background-color: darkorange; /* Darker green on hover */
 }
 
 .uses {
