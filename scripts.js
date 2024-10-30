@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentYear = 2025; // Initial year
     let currentMonth = 0; // January
 
+    // Example of occupied and free days
+    const occupiedDays = [5, 10, 15]; // Example occupied days
+    const freeDays = [1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+
     const renderCalendar = (year, month) => {
-        // Update month and year display
         const monthNames = [
             "January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
@@ -12,111 +15,50 @@ document.addEventListener("DOMContentLoaded", function () {
         calendarContainer.querySelector(".month h2").textContent = monthNames[month];
         calendarContainer.querySelector(".year h2").textContent = year;
 
-        // Clear previous days
         const daysContainer = calendarContainer.querySelector(".days");
         daysContainer.innerHTML = "";
 
-        // Calculate days of current, previous, and next months
         const lastDayCurrentMonth = new Date(year, month + 1, 0).getDate();
         const lastDayPrevMonth = new Date(year, month, 0).getDate();
         const startDayOfWeek = new Date(year, month, 1).getDay();
 
-        // Display previous month's last few days if offset needed
+        // Previous month days
         for (let i = startDayOfWeek; i > 0; i--) {
             const dayElem = document.createElement("div");
             dayElem.className = "day";
             dayElem.textContent = lastDayPrevMonth - i + 1;
-            dayElem.style.color = "grey"; // Style for previous month's days
-            dayElem.addEventListener("click", () => navigateMonth(-1));
+            dayElem.style.color = "grey"; 
             daysContainer.appendChild(dayElem);
         }
 
-        // Display current month days
+        // Current month days
         for (let i = 1; i <= lastDayCurrentMonth; i++) {
             const dayElem = document.createElement("div");
             dayElem.className = "day";
             dayElem.textContent = i;
+            if (occupiedDays.includes(i)) {
+                dayElem.classList.add("occupied"); // Add occupied class
+            } else if (freeDays.includes(i)) {
+                dayElem.classList.add("free"); // Add free class
+            }
             dayElem.addEventListener("click", () => displayDate(i, month, year));
             daysContainer.appendChild(dayElem);
         }
 
-        // Display next month's first few days if necessary
+        // Next month days
         const daysDisplayed = daysContainer.children.length;
         for (let i = 1; daysDisplayed + i <= 42; i++) {
             const dayElem = document.createElement("div");
             dayElem.className = "day";
             dayElem.textContent = i;
-            dayElem.style.color = "grey"; // Style for next month's days
-            dayElem.addEventListener("click", () => navigateMonth(1));
+            dayElem.style.color = "grey"; 
             daysContainer.appendChild(dayElem);
         }
     };
 
-    const navigateMonth = (offset) => {
-        currentMonth += offset;
-        if (currentMonth < 0) {
-            currentMonth = 11;
-            currentYear--;
-        } else if (currentMonth > 11) {
-            currentMonth = 0;
-            currentYear++;
-        }
-        renderCalendar(currentYear, currentMonth);
-        smoothTransition();
-    };
-
-    const navigateYear = (offset) => {
-        currentYear += offset;
-        renderCalendar(currentYear, currentMonth);
-        smoothTransition();
-    };
-
-    const displayDate = (day, month, year) => {
-        const outputBox = document.querySelector(".output");
-        outputBox.textContent = `Selected Date: ${day}-${month + 1}-${year}`;
-    };
-
-    const smoothTransition = () => {
-        const calendar = document.querySelector(".calander");
-        calendar.style.transform = "scale(1.02)";
-        setTimeout(() => (calendar.style.transform = "scale(1)"), 200);
-    };
-
-    // Event listeners for month and year buttons
-    document.querySelector(".month button:nth-child(1)").addEventListener("click", () => navigateMonth(-1));
-    document.querySelector(".month button:nth-child(3)").addEventListener("click", () => navigateMonth(1));
-    document.querySelector(".year button:nth-child(1)").addEventListener("click", () => navigateYear(-1));
-    document.querySelector(".year button:nth-child(3)").addEventListener("click", () => navigateYear(1));
-
-    // Image gallery functionality
-    let currentImageIndex = 0;
-    const images = [
-        "images/shop.png",
-        "images/shop2.png",
-        "images/shop3.png"
-    ];
-
-    function changeImage(thumbnail) {
-        const mainImage = document.getElementById('main-image');
-        mainImage.src = thumbnail.src;
-        currentImageIndex = images.indexOf(thumbnail.src);
-    }
-
-    function prevImage() {
-        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-        document.getElementById('main-image').src = images[currentImageIndex];
-    }
-
-    function nextImage() {
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        document.getElementById('main-image').src = images[currentImageIndex];
-    }
-
-    // Attach event listeners to thumbnails
-    document.querySelectorAll('.thumbnail').forEach(thumbnail => {
-        thumbnail.addEventListener('click', () => changeImage(thumbnail));
-    });
-
+    // Remaining functions (navigateMonth, navigateYear, displayDate, smoothTransition)
+    // ... (keep the existing functions as before)
+    
     // Initialize calendar
     renderCalendar(currentYear, currentMonth);
 });
