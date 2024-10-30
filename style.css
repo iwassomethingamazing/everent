@@ -10,11 +10,17 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
 }
 
+.product-content {
+    display: flex;
+    justify-content: space-between; /* Align images and rental card */
+}
+
 .image-gallery {
+    flex: 1; /* Allow the image gallery to take up available space */
     text-align: center;
 }
 
@@ -43,13 +49,56 @@ body {
     border-color: #007bff; /* Highlight on hover */
 }
 
-.calendar-container {
-    margin: 20px 0;
+.rental-card {
+    flex: 1; /* Allow the rental card to take up available space */
+    margin-left: 20px; /* Space between images and card */
 }
 
-.price {
-    font-size: 1.5em;
+.rental-card__title {
+    margin: 0;
+}
+
+.prices {
     margin: 10px 0;
+}
+
+.price-value {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.dates {
+    margin: 10px 0;
+}
+
+.select-date {
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn--link {
+    background-color: transparent;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.btn--link:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn--full-width {
+    width: 100%;
 }
 
 .rent-button {
@@ -60,10 +109,11 @@ body {
     border-radius: 5px;
     padding: 10px 15px;
     cursor: pointer;
-    font-family: 'Font1', sans-serif;
     text-decoration: none;
+    margin-top: 20px;
 }
 
 .rent-button:hover {
     background-color: darkgreen;
 }
+
