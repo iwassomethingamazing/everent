@@ -8,18 +8,6 @@
     src: url('fonts/font1.ttf') format('truetype');
 }
 
-@media (max-width: 768px) {
-    .product-box {
-        width: calc(50% - 20px); /* 2 boxes per row */
-    }
-}
-
-@media (max-width: 480px) {
-    .product-box {
-        width: calc(100% - 20px); /* 1 box per row */
-    }
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -57,8 +45,8 @@ body {
     border: 1px solid gray; /* Corrected to "solid" for proper border style */
     border-radius: 10px;
     padding: 20px;
-    margin: 20px; /* Increased margin for more distance */
-    width: 300px;
+    margin: 10px; /* Adjusted margin for consistent spacing */
+    width: 300px; /* Default width for larger screens */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;
@@ -75,7 +63,7 @@ body {
 }
 
 .product-box h2 {
-    font-family: 'Font1', sans-serif; /* Apply the custom font for prices */
+    font-family: 'Font1', sans-serif; /* Apply the custom font for titles */
     font-weight: bold;
     color: orange;
     margin: 10px 0;
@@ -85,6 +73,19 @@ body {
     font-size: 14px;
     color: #555;
     margin-bottom: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .product-box {
+        width: calc(50% - 20px); /* 2 boxes per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-box {
+        width: calc(100% - 20px); /* 1 box per row */
+    }
 }
 
 .footer {
