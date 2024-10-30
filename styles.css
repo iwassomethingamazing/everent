@@ -132,14 +132,14 @@ body {
 }
 
 .footer-icon img {
-    width: 10px; /* Icon size */
-    height: 10px; /* Icon size */
+    width: 20px; /* Icon size */
+    height: 20px; /* Icon size */
     margin-bottom: 5px; /* Spacing between icon and text */
 }
 
 .icon-text {
     font-family: 'Font1', sans-serif;
-    font-size: 7px;
+    font-size: 15px;
 }
 
 .balance {
