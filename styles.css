@@ -34,21 +34,6 @@ body {
     color: white;
 }
 
-
-.searchbar {
-    padding: 10px;
-    border: 1px solid orange;
-    border-radius: 50px; /* Rounded corners */
-    outline: none;
-    font-size: 16px;
-    transition: border-color 0.3s;
-}
-
-.searchbar:focus {
-    border-color: darkorange; /* Highlight border on focus */
-}
-
-
 .products-container {
     display: flex;
     justify-content: center;
