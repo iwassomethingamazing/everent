@@ -115,6 +115,17 @@ body {
     margin-top: 0; /* Remove margin if fixed */
 }
 
+.icon-container {
+    display: flex;
+    justify-content: space-around; /* Distributes icons evenly */
+    padding: 20px; /* Add some padding around the container */
+}
+
+.footer-icon {
+    width: 40px; /* Adjust icon size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
 .orange-bar {
     background-color: orange;
     color: white;
