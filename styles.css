@@ -84,6 +84,7 @@ body {
 }
 
 .rent-button {
+    display: inline-block; /* Make the link behave like a button */
     background-color: orange; /* Green background */
     color: white; /* White text color */
     border: none; /* No border */
@@ -92,13 +93,13 @@ body {
     cursor: pointer; /* Pointer cursor on hover */
     font-family: 'Font1', sans-serif; /* Custom font family */
     margin-top: 10px; /* Space above the button */
+    text-decoration: none; /* Remove underline */
     transition: background-color 0.3s; /* Smooth transition */
 }
 
 .rent-button:hover {
     background-color: darkorange; /* Darker green on hover */
 }
-
 .uses {
     font-family: 'Font1', sans-serif; /* Apply the custom font for prices */
     font-weight: bold;
