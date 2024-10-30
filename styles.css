@@ -83,6 +83,22 @@ body {
     margin-top: 10px;
 }
 
+.rent-button {
+    background-color: green; /* Green background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: 'Font1', sans-serif; /* Custom font family */
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.rent-button:hover {
+    background-color: darkgreen; /* Darker green on hover */
+}
+
 .uses {
     font-family: 'Font1', sans-serif; /* Apply the custom font for prices */
     font-weight: bold;
