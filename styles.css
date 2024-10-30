@@ -19,13 +19,21 @@ body {
 
 .navbar h1 {
     font-family: 'Evevent', sans-serif;
+    font-size: 36px; /* Increased font size */
     color: white;
 }
 
 .searchbar {
     padding: 10px;
-    border: none;
-    border-radius: 5px;
+    border: 1px solid orange;
+    border-radius: 0; /* No rounded corners */
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.searchbar:focus {
+    border-color: darkorange; /* Highlight border on focus */
 }
 
 .products-container {
@@ -41,7 +49,7 @@ body {
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    width: 300px; /* Increased width */
+    width: 300px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;
@@ -51,14 +59,21 @@ body {
     transform: scale(1.05);
 }
 
-.product-box i {
-    font-size: 40px; /* Icon size */
-    color: orange;
+.product-icon {
+    width: 80px; /* Icon size */
+    height: auto;
     margin-bottom: 10px;
 }
 
 .product-box h2 {
     color: orange;
+    margin: 10px 0;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
 }
 
 .price {
