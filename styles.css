@@ -135,7 +135,7 @@ body {
 }
 
 .footer-icon-img {
-    width: 35px;  /* Adjust the width as needed */
+    width: 35px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
 }
 
@@ -146,7 +146,6 @@ body {
     margin-left: 20px;
     font-size: 20px;
 }
-
 
 .price,
 .km {
@@ -204,7 +203,5 @@ body {
     font-size: 16px;
     cursor: pointer;
 }
-
-
 
 
