@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.product-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.image-gallery {
+    text-align: center;
+}
+
+#main-image {
+    width: 100%; /* Full width */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 80px; /* Thumbnail size */
+    height: auto;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+.thumbnail:hover {
+    border-color: #007bff; /* Highlight on hover */
+}
+
+.calendar-container {
+    margin: 20px 0;
+}
+
+.price {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.rent-button {
+    display: inline-block;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: 'Font1', sans-serif;
+    text-decoration: none;
+}
+
+.rent-button:hover {
+    background-color: darkgreen;
+}
