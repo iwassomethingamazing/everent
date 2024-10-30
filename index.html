@@ -3,46 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Renting Products Shop</title>
+    <title>Rental Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">📦 Shop</div>
-        <input type="text" class="search-bar" placeholder="Search...">
-    </nav>
-
-    <div class="product-container">
-        <div class="product">
-            <div class="product-info">
-                <h3>Product 1</h3>
-                <p>$10 per day</p>
-            </div>
+    <header>
+        <nav class="navbar">
+            <h1>Rental Services</h1>
+            <input type="text" class="searchbar" placeholder="Search...">
+        </nav>
+    </header>
+    
+    <div class="products-container">
+        <div class="product-box">
+            <h2>Product 1</h2>
+            <p>Description of Product 1.</p>
+            <div class="price">Price: $10/day</div>
         </div>
-        <div class="product">
-            <div class="product-info">
-                <h3>Product 2</h3>
-                <p>$15 per day</p>
-            </div>
+        <div class="product-box">
+            <h2>Product 2</h2>
+            <p>Description of Product 2.</p>
+            <div class="price">Price: $15/day</div>
         </div>
-        <div class="product">
-            <div class="product-info">
-                <h3>Product 3</h3>
-                <p>$20 per day</p>
-            </div>
-        </div>
-        <div class="product">
-            <div class="product-info">
-                <h3>Product 4</h3>
-                <p>$25 per day</p>
-            </div>
+        <div class="product-box">
+            <h2>Product 3</h2>
+            <p>Description of Product 3.</p>
+            <div class="price">Price: $20/day</div>
         </div>
     </div>
-
+    
     <footer class="footer">
-        <p>&copy; 2024 Renting Products Shop</p>
+        <div class="black-bar">
+            <p>Prices are subject to change.</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
