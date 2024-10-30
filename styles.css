@@ -35,8 +35,8 @@ body {
 
 .products-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 20px;
 }
 
@@ -45,8 +45,8 @@ body {
     border: 1px solid gray;
     border-radius: 10px;
     padding: 20px;
-    margin: 20px;
-    width: 300px;
+    margin: 10px; /* Adjusted margin for spacing */
+    width: calc(25% - 20px); /* Adjusted width for 4 per row with margin */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;
