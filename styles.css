@@ -1,3 +1,9 @@
+/* Custom font definition */
+@font-face {
+    font-family: 'Evevent'; /* Use the name you want for the font */
+    src: url('fonts/title.ttf') format('truetype'); /* Adjust the path as necessary */
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,10 +24,11 @@ body {
 }
 
 .navbar h1 {
-    font-family: 'Evevent', sans-serif;
+    font-family: 'Evevent', sans-serif; /* Apply the custom font */
     font-size: 36px; /* Increased font size */
     color: white;
 }
+
 
 .searchbar {
     padding: 10px;
