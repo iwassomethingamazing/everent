@@ -9,18 +9,14 @@
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
+    background-color: #f4f4f4;
 }
 
 .navbar {
@@ -32,8 +28,8 @@ body {
 }
 
 .navbar h1 {
-    font-family: 'Font1', sans-serif;
-    font-size: 36px;
+    font-family: 'Font1', sans-serif; /* Apply the custom font */
+    font-size: 36px; /* Increased font size */
     color: white;
 }
 
