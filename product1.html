@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product 1</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- For calendar icon -->
 </head>
 <body>
     <div class="product-container">
@@ -14,7 +13,9 @@
         <div class="product-content">
             <div class="image-gallery">
                 <div class="image-box">
+                    <button class="arrow left-arrow" onclick="prevImage()">&#10094;</button>
                     <img id="main-image" src="images/shop.png" alt="Product Image">
+                    <button class="arrow right-arrow" onclick="nextImage()">&#10095;</button>
                 </div>
                 <div class="thumbnail-container">
                     <img class="thumbnail" src="images/shop.png" alt="Product Image 1" onclick="changeImage(this)">
@@ -35,27 +36,31 @@
                         <span class="price-period">For 30+ days</span>
                     </div>
                 </div>
-                <div class="dates">
-                    <div class="select-date">
-                        <div class="date-display__start">
-                            <span class="date-label">Start date</span>
-                            <span class="date-placeholder active">Select</span>
-                        </div>
-                        <div class="date-display__end">
-                            <span class="date-label">End date</span>
-                            <span class="date-placeholder active">Select</span>
-                        </div>
+                <div class="calendar">
+                    <h3>Availability</h3>
+                    <div class="calendar-grid">
+                        <!-- Example calendar -->
+                        <div class="calendar-day occupied">1</div>
+                        <div class="calendar-day free">2</div>
+                        <div class="calendar-day free">3</div>
+                        <div class="calendar-day occupied">4</div>
+                        <div class="calendar-day free">5</div>
+                        <div class="calendar-day free">6</div>
+                        <div class="calendar-day occupied">7</div>
+                        <div class="calendar-day free">8</div>
+                        <div class="calendar-day free">9</div>
+                        <div class="calendar-day occupied">10</div>
+                        <!-- Add more days as needed -->
                     </div>
                 </div>
                 <button class="btn btn--link">Discount code</button>
-                <button class="btn--center btn--full-width btn__send-request">Send a rental request</button>
+                <button class="rent-button">Rent Now</button>
                 <div class="booking-overview">
                     <div class="total">
                         <p>Total</p>
                         <p class="amount">CHF 0.00</p>
                     </div>
                 </div>
-                <button class="rent-button">Rent Now</button>
             </div>
         </div>
     </div>
