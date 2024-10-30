@@ -18,6 +18,7 @@ body {
 }
 
 .navbar h1 {
+    font-family: 'Evevent', sans-serif;
     color: white;
 }
 
@@ -29,7 +30,7 @@ body {
 
 .products-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
 }
@@ -40,13 +41,20 @@ body {
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    width: 200px;
+    width: 300px; /* Increased width */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
     transition: transform 0.3s;
 }
 
 .product-box:hover {
     transform: scale(1.05);
+}
+
+.product-box i {
+    font-size: 40px; /* Icon size */
+    color: orange;
+    margin-bottom: 10px;
 }
 
 .product-box h2 {
