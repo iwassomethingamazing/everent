@@ -131,10 +131,11 @@ body {
     align-items: center;
 }
 
-.footer-icon img {
-    width: 60px; /* Icon size */
-    height: 60px; /* Icon size */
+.footer-icon-img {
+    width: 50px;  /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
+
 
 
 .balance {
