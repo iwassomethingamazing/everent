@@ -1,26 +1,26 @@
-// Currency balances based on country
-const moneyBalances = {
-    'US': { value: 29.99, currency: 'USD' }, // United States Dollar
-    'UK': { value: 25.00, currency: 'GBP' }, // British Pound
-    'EU': { value: 27.00, currency: 'EUR' }, // Euro
-    'JP': { value: 3000.00, currency: 'JPY' }, // Japanese Yen
-    'CH': { value: 35.00, currency: 'CHF' }, // Swiss Franc
-    'AU': { value: 40.00, currency: 'AUD' }, // Australian Dollar
-    'CA': { value: 32.50, currency: 'CAD' }, // Canadian Dollar
-};
+function formatCurrency(value, currency) {
+    var parts = new Intl.NumberFormat(navigator.language, { style: 'currency', currency }).formatToParts(value);
+    
+    var symbol = parts.find(p => p.type === 'currency').value;
+    var separator = parts.find(p => p.type === 'group')?.value || ''; // Use optional chaining
+    var decimal = parts.find(p => p.type === 'decimal')?.value || '';
 
-// Function to get the user's country (for example purposes)
-function getUserCountry() {
-    // This is a placeholder. You can replace it with a geolocation API or similar.
-    return 'CH'; // Change this value to test different countries
+    return {
+        formattedValue: parts.map(p => p.value).join(''),
+        symbol,
+        separator,
+        decimal
+    };
 }
 
-// Function to set the money value in the HTML
-function setMoneyValue() {
-    const userCountry = getUserCountry();
-    const balance = moneyBalances[userCountry] || { value: 0, currency: 'USD' }; // Default to USD if country not found
-    document.getElementById('moneyValue').innerText = `${balance.currency} ${balance.value.toFixed(2)}`; // Format as currency
-}
+const currencies = ['USD', 'EUR', 'CHF', 'GBP', 'JPY'];
 
-// Call the function when the page loads
-window.onload = setMoneyValue;
+currencies.forEach(currency => {
+    const result = formatCurrency(10000, currency);
+    console.log(`Currency: ${currency}`);
+    console.log(`Formatted Value: ${result.formattedValue}`);
+    console.log(`Currency Symbol: ${result.symbol}`);
+    console.log(`Group Separator: ${result.separator}`);
+    console.log(`Decimal Separator: ${result.decimal}`);
+    console.log('---');
+});
