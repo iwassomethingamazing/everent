@@ -3,110 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Everent - Rent Cool Products</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata:700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Renting Products Shop</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo-icon.png" alt="Logo Icon" class="logo-icon">
-            <h1>Everent</h1>
-        </div>
-        <div class="container">
-            <input type="text" placeholder="Search..." id="searchBar" oninput="handleInput()">
-            <div class="search" onclick="handleSearchClick()">
-                <img id="searchIcon" src="images/search-icon.png" alt="Search Icon">
-                <img id="clearIcon" src="images/clear-icon.png" alt="Clear Icon" style="display: none;">
+    <nav class="navbar">
+        <div class="logo">📦 Shop</div>
+        <input type="text" class="search-bar" placeholder="Search...">
+    </nav>
+
+    <div class="product-container">
+        <div class="product">
+            <div class="product-info">
+                <h3>Product 1</h3>
+                <p>$10 per day</p>
             </div>
         </div>
-    </header>
-
-    <div class="screenshot">
-        <img src="images/screenshot.png" alt="Screenshot" class="screenshot-img">
+        <div class="product">
+            <div class="product-info">
+                <h3>Product 2</h3>
+                <p>$15 per day</p>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-info">
+                <h3>Product 3</h3>
+                <p>$20 per day</p>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-info">
+                <h3>Product 4</h3>
+                <p>$25 per day</p>
+            </div>
+        </div>
     </div>
 
-    <section class="product-list" id="productList">
-        <div class="product" data-name="Electric Bike">
-            <img src="images/bike.png" alt="Electric Bike">
-            <div class="product-info">
-                <h3>Electric Bike</h3>
-                <p class="price">30 CHF/day</p>
-                <button class="buy-button">Rent Now</button>
-            </div>
-        </div>
-        <div class="product" data-name="Floor Scrubber">
-            <img src="images/scrubber.png" alt="Floor Scrubber">
-            <div class="product-info">
-                <h3>Floor Scrubber</h3>
-                <p class="price">50 CHF/day</p>
-                <button class="buy-button">Rent Now</button>
-            </div>
-        </div>
-        <div class="product" data-name="Mountain Bike">
-            <img src="images/mountain-bike.png" alt="Mountain Bike">
-            <div class="product-info">
-                <h3>Mountain Bike</h3>
-                <p class="price">40 CHF/day</p>
-                <button class="buy-button">Rent Now</button>
-            </div>
-        </div>
-        <div class="product" data-name="Electric Scooter">
-            <img src="images/scooter.png" alt="Electric Scooter">
-            <div class="product-info">
-                <h3>Electric Scooter</h3>
-                <p class="price">25 CHF/day</p>
-                <button class="buy-button">Rent Now</button>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="black-bar">
-            <div class="footer-icon">
-                <img src="images/home.png" alt="Home">
-            </div>
-            <div class="footer-icon">
-                <img src="images/rentals.png" alt="Rentals">
-            </div>
-            <div class="footer-icon">
-                <img src="images/profile.png" alt="Profile">
-            </div>
-        </div>
+    <footer class="footer">
+        <p>&copy; 2024 Renting Products Shop</p>
     </footer>
 
-    <script>
-        function handleInput() {
-            const input = document.getElementById('searchBar');
-            const searchIcon = document.getElementById('searchIcon');
-            const clearIcon = document.getElementById('clearIcon');
-            
-            if (input.value.trim() === '') {
-                searchIcon.style.display = 'block';
-                clearIcon.style.display = 'none';
-            } else {
-                searchIcon.style.display = 'none';
-                clearIcon.style.display = 'block';
-            }
-        }
-
-        function handleSearchClick() {
-            const input = document.getElementById('searchBar');
-            if (input.value.trim() !== '') {
-                filterProducts();
-            }
-        }
-
-        function filterProducts() {
-            const query = document.getElementById('searchBar').value.toLowerCase();
-            const products = document.querySelectorAll('.product');
-
-            products.forEach(product => {
-                const productName = product.getAttribute('data-name').toLowerCase();
-                product.style.display = productName.includes(query) ? 'block' : 'none';
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
