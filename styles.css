@@ -83,6 +83,13 @@ body {
     margin-top: 10px;
 }
 
+.uses {
+    font-family: 'Font1', sans-serif; /* Apply the custom font for prices */
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
