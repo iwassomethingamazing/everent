@@ -1,41 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <h1>Rental Services</h1>
-            <input type="text" class="searchbar" placeholder="Search...">
-        </nav>
-    </header>
-    
-    <div class="products-container">
-        <div class="product-box">
-            <h2>Product 1</h2>
-            <p>Description of Product 1.</p>
-            <div class="price">Price: $10/day</div>
-        </div>
-        <div class="product-box">
-            <h2>Product 2</h2>
-            <p>Description of Product 2.</p>
-            <div class="price">Price: $15/day</div>
-        </div>
-        <div class="product-box">
-            <h2>Product 3</h2>
-            <p>Description of Product 3.</p>
-            <div class="price">Price: $20/day</div>
-        </div>
-    </div>
-    
-    <footer class="footer">
-        <div class="black-bar">
-            <p>Prices are subject to change.</p>
-        </div>
-    </footer>
-</body>
-</html>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: orange;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-family: 'Evevent', sans-serif;
+    color: white;
+}
+
+.searchbar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product-box {
+    background-color: white;
+    border: 2px solid orange;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px; /* Increased width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-box:hover {
+    transform: scale(1.05);
+}
+
+.product-box i {
+    font-size: 40px; /* Icon size */
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.product-box h2 {
+    color: orange;
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.black-bar {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
