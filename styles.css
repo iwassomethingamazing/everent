@@ -64,6 +64,8 @@ body {
 }
 
 .product-box h2 {
+    font-family: 'Font1', sans-serif; /* Apply the custom font for prices */
+    font-weight: bold;
     color: orange;
     margin: 10px 0;
 }
