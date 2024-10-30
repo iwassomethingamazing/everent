@@ -123,10 +123,9 @@ body {
 }
 
 .balance {
-    font-family: 'Font1', sans-serif;
-    background-color: white; /* Use your custom font for prices */
+    font-family: 'Font1', sans-serif; /* Use your custom font for prices */
     font-weight: bold;
-    color: #333;
+    color: white;
     margin-left: 20px; /* Adjust spacing as needed */
     font-size: 25px; /* 10% smaller than the title (36px - 10%) */
 }
