@@ -104,3 +104,10 @@ body {
     text-align: center;
     padding: 50px;
 }
+
+.balance {
+    font-family: 'Font1', sans-serif; /* Use your custom font for prices */
+    font-weight: bold;
+    color: #333;
+    margin-left: 20px; /* Adjust spacing as needed */
+}
