@@ -115,6 +115,33 @@ body {
     padding: 30px;
 }
 
+.footer-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0; /* Additional padding for spacing */
+}
+
+.footer-icon {
+    text-decoration: none;
+    color: black;
+    font-family: 'Font1', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-icon img {
+    width: 30px; /* Icon size */
+    height: 30px; /* Icon size */
+    margin-bottom: 5px; /* Spacing between icon and text */
+}
+
+.icon-text {
+    font-family: 'Font1', sans-serif;
+    font-size: 14px;
+}
+
 .balance {
     font-family: 'Font1', sans-serif;
     font-weight: bold;
