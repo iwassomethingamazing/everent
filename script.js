@@ -14,4 +14,4 @@ const formattedMoney = formatCurrency(valueToDisplay);
 document.getElementById('moneyValue').textContent = formattedMoney;
 
 // Optional: Log the formatted value to the console
-console.log(`Formatted Value: ${formattedMoney}`);
+console.log(`Formatted Value: CHF{formattedMoney}`);
