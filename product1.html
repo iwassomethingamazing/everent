@@ -4,33 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product 1</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- For calendar icon -->
 </head>
 <body>
     <div class="product-container">
         <h1>Product 1</h1>
         
-        <div class="image-gallery">
-            <img id="main-image" src="images/shop.png" alt="Product Image">
-            <div class="thumbnail-container">
-                <img class="thumbnail" src="images/shop.png" alt="Product Image 1" onclick="changeImage(this)">
-                <img class="thumbnail" src="images/shop2.png" alt="Product Image 2" onclick="changeImage(this)">
-                <img class="thumbnail" src="images/shop3.png" alt="Product Image 3" onclick="changeImage(this)">
+        <div class="product-content">
+            <div class="image-gallery">
+                <img id="main-image" src="images/shop.png" alt="Product Image">
+                <div class="thumbnail-container">
+                    <img class="thumbnail" src="images/shop.png" alt="Product Image 1" onclick="changeImage(this)">
+                    <img class="thumbnail" src="images/shop2.png" alt="Product Image 2" onclick="changeImage(this)">
+                    <img class="thumbnail" src="images/shop3.png" alt="Product Image 3" onclick="changeImage(this)">
+                </div>
+            </div>
+
+            <div class="rental-card">
+                <h3 class="rental-card__title">Daily Price</h3>
+                <div class="prices">
+                    <div class="prices-per-day">
+                        <p class="price-value">CHF 8.40</p>
+                        <span class="price-period">For 2 to 6 days</span>
+                    </div>
+                    <div class="prices-per-day">
+                        <p class="price-value">CHF 6.00</p>
+                        <span class="price-period">For 30+ days</span>
+                    </div>
+                </div>
+                <div class="dates">
+                    <div class="select-date">
+                        <div class="date-display__start">
+                            <span class="date-label">Start date</span>
+                            <span class="date-placeholder active">Select</span>
+                        </div>
+                        <div class="date-display__end">
+                            <span class="date-label">End date</span>
+                            <span class="date-placeholder active">Select</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn--link">Discount code</button>
+                <button class="btn--center btn--full-width btn__send-request">Send a rental request</button>
+                <div class="booking-overview">
+                    <div class="total">
+                        <p>Total</p>
+                        <p class="amount">CHF 0.00</p>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="calendar-container">
-            <label for="rental-date">Select Rental Date:</label>
-            <input type="date" id="rental-date">
-            <p class="available-dates">Available Dates: <span id="available-dates"></span></p>
-        </div>
-        
-        <div class="price">Price: <span id="price">CHF10/day</span></div>
-        
+
         <button class="rent-button">Rent Now</button>
     </div>
 
-    <script src="scripts.js"></script> <!-- Link to your JS file -->
+    <script src="script.js"></script> <!-- Link to your JS file -->
 </body>
 </html>
