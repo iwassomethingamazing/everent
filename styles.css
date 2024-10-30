@@ -4,6 +4,11 @@
     src: url('fonts/title.ttf') format('truetype'); /* Adjust the path as necessary */
 }
 
+@font-face {
+    font-family: 'Font1'; /* Name for the price font */
+    src: url('fonts/font1.ttf') format('truetype'); /* Path to price font */
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -85,6 +90,7 @@ body {
 }
 
 .price {
+    font-family: 'Font1', sans-serif; /* Apply the custom font for prices */
     font-weight: bold;
     color: #333;
     margin-top: 10px;
